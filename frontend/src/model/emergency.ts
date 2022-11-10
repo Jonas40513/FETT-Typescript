@@ -1,4 +1,4 @@
-import { Department } from "./department";
+import { Department } from "./department"
 
 export interface Emergency {
     readonly id: string,
