@@ -1,0 +1,398 @@
+[
+  {
+    "id": "E220102098",
+    "start": "2022-01-26T16:32:14+01:00",
+    "end": null,
+    "level": 1,
+    "type": "TEE",
+    "subtype": "KLEINALARM",
+    "location": "KASTEN 88",
+    "town": "KASTEN",
+    "district": "Rohrbach",
+    "longitude": 14.076225,
+    "latitude": 48.543266,
+    "departments": [
+      {
+        "name": "FF Kasten"
+      }
+    ]
+  },
+  {
+    "id": "E220102096",
+    "start": "2022-01-26T16:09:09+01:00",
+    "end": null,
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRAND WOHNHAUS",
+    "location": "WIMMINGER STRAßE 25",
+    "town": "ST. GEORGEN AN DER GUSEN",
+    "district": "Perg",
+    "longitude": 14.447637,
+    "latitude": 48.265117,
+    "departments": [
+      {
+        "name": "FF St. Georgen an der Gusen"
+      }
+    ]
+  },
+  {
+    "id": "E220102088",
+    "start": "2022-01-26T14:22:48+01:00",
+    "end": "2022-01-26T14:28:49+01:00",
+    "level": 1,
+    "type": "SONSTIGE",
+    "subtype": "BRANDMELDETASTE GEDRÜCKT",
+    "location": "RIED IN DER RIEDMARK",
+    "town": "RIED IN DER RIEDMARK",
+    "district": "Perg",
+    "longitude": 14.527746,
+    "latitude": 48.270512,
+    "departments": [
+      {
+        "name": "FF Ried in der Riedmark"
+      }
+    ]
+  },
+  {
+    "id": "E220102086",
+    "start": "2022-01-26T14:18:15+01:00",
+    "end": "2022-01-26T16:44:57+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "TECHNISCHER EINSATZ KLEIN",
+    "location": "BREITENAICH 88",
+    "town": "BREITENAICH",
+    "district": "Ried im Innkreis",
+    "longitude": 13.427454,
+    "latitude": 48.300879,
+    "departments": [
+      {
+        "name": "FF St. Martin im Innkreis"
+      }
+    ]
+  },
+  {
+    "id": "E220102082",
+    "start": "2022-01-26T13:43:06+01:00",
+    "end": "2022-01-26T16:18:37+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "ÖLSPUR, ÖLAUSTRITT",
+    "location": "PRAMET 59",
+    "town": "PRAMET",
+    "district": "Ried im Innkreis",
+    "longitude": 13.487224,
+    "latitude": 48.142112,
+    "departments": [
+      {
+        "name": "FF Pramet"
+      }
+    ]
+  },
+  {
+    "id": "E220102079",
+    "start": "2022-01-26T13:12:11+01:00",
+    "end": "2022-01-26T13:55:07+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "VERKEHRSUNFALL AUFRÄUMARBEITEN",
+    "location": "FLIEDERSTRAßE 1",
+    "town": "PICHL BEI WELS",
+    "district": "Wels-Land",
+    "longitude": 13.895332,
+    "latitude": 48.18183,
+    "departments": [
+      {
+        "name": "FF Geisensheim"
+      },
+      {
+        "name": "FF Pichl bei Wels"
+      }
+    ]
+  },
+  {
+    "id": "E220102077",
+    "start": "2022-01-26T12:39:43+01:00",
+    "end": "2022-01-26T13:28:05+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "GREINERSTRAßE 70",
+    "town": "KREMSMÜNSTER",
+    "district": "Kirchdorf",
+    "longitude": 14.120505,
+    "latitude": 48.037776,
+    "departments": [
+      {
+        "name": "FF Kremsmünster"
+      }
+    ]
+  },
+  {
+    "id": "E220102074",
+    "start": "2022-01-26T12:11:00+01:00",
+    "end": "2022-01-26T14:52:52+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRAND KFZ",
+    "location": "MITTERDORF 83",
+    "town": "MITTERDORF",
+    "district": "Ried im Innkreis",
+    "longitude": 13.348304,
+    "latitude": 48.163837,
+    "departments": [
+      {
+        "name": "FF Mettmach"
+      }
+    ]
+  },
+  {
+    "id": "E220102071",
+    "start": "2022-01-26T12:05:24+01:00",
+    "end": "2022-01-26T12:41:22+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "KORNSPITZSTRAßE 1",
+    "town": "ASTEN",
+    "district": "Linz-Land",
+    "longitude": 14.411086,
+    "latitude": 48.214985,
+    "departments": [
+      {
+        "name": "FF Asten"
+      },
+      {
+        "name": "FF Raffelstetten"
+      }
+    ]
+  },
+  {
+    "id": "E220102069",
+    "start": "2022-01-26T11:58:32+01:00",
+    "end": "2022-01-26T13:06:53+01:00",
+    "level": 1,
+    "type": "PERSON",
+    "subtype": "PERSONENRETTUNG",
+    "location": "RICHTERSTRAßE 34",
+    "town": "HAAG",
+    "district": "Linz-Land",
+    "longitude": 14.264803,
+    "latitude": 48.272172,
+    "departments": [
+      {
+        "name": "FF Hart / LL"
+      }
+    ]
+  },
+  {
+    "id": "E220102067",
+    "start": "2022-01-26T11:44:28+01:00",
+    "end": null,
+    "level": 1,
+    "type": "TEE",
+    "subtype": "VERKEHRSUNFALL AUFRÄUMARBEITEN",
+    "location": "WALDBURG",
+    "town": null,
+    "district": "Freistadt",
+    "longitude": 14.420319,
+    "latitude": 48.517012,
+    "departments": [
+      {
+        "name": "FF Kefermarkt"
+      },
+      {
+        "name": "FF Waldburg"
+      }
+    ]
+  },
+  {
+    "id": "E220102065",
+    "start": "2022-01-26T11:41:57+01:00",
+    "end": "2022-01-26T12:07:25+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "INDUSTRIEZEILE 1",
+    "town": "HIMMELLINDACH",
+    "district": "Braunau",
+    "longitude": 13.06839,
+    "latitude": 48.250408,
+    "departments": [
+      {
+        "name": "FF Braunau am Inn"
+      }
+    ]
+  },
+  {
+    "id": "E220102063",
+    "start": "2022-01-26T11:35:41+01:00",
+    "end": "2022-01-26T15:47:23+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "ÖLSPUR, ÖLAUSTRITT",
+    "location": "GALLNEUKIRCHEN",
+    "town": "GALLNEUKIRCHEN",
+    "district": "Urfahr-Umgebung",
+    "longitude": 14.410659,
+    "latitude": 48.352603,
+    "departments": [
+      {
+        "name": "FF Bad Leonfelden"
+      },
+      {
+        "name": "FF Gallneukirchen"
+      },
+      {
+        "name": "FF Schweinbach"
+      }
+    ]
+  },
+  {
+    "id": "E220102058",
+    "start": "2022-01-26T11:12:36+01:00",
+    "end": "2022-01-26T11:32:30+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "WALTER SIMMER-STRAßE 13",
+    "town": "MONDSEE",
+    "district": "Vöcklabruck",
+    "longitude": 13.331541,
+    "latitude": 47.861297,
+    "departments": [
+      {
+        "name": "FF Mondsee"
+      }
+    ]
+  },
+  {
+    "id": "E220102054",
+    "start": "2022-01-26T10:34:30+01:00",
+    "end": "2022-01-26T11:55:09+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "KLEINALARM",
+    "location": "HAINING 39",
+    "town": "HAINING",
+    "district": "Vöcklabruck",
+    "longitude": 13.542891,
+    "latitude": 47.941163,
+    "departments": [
+      {
+        "name": "FF Kemating / VB"
+      }
+    ]
+  },
+  {
+    "id": "E220102052",
+    "start": "2022-01-26T09:33:05+01:00",
+    "end": "2022-01-26T10:00:11+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRAND GEWERBE, INDUSTRIE",
+    "location": "WALTER SIMMER-STRAßE 4",
+    "town": "MONDSEE",
+    "district": "Vöcklabruck",
+    "longitude": 13.330989,
+    "latitude": 47.863691,
+    "departments": [
+      {
+        "name": "FF Mondsee"
+      }
+    ]
+  },
+  {
+    "id": "E220102050",
+    "start": "2022-01-26T09:14:00+01:00",
+    "end": "2022-01-26T09:42:11+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "ATTERSEESTRAßE 7",
+    "town": "SEEWALCHEN AM ATTERSEE",
+    "district": "Vöcklabruck",
+    "longitude": 13.598518,
+    "latitude": 47.950234,
+    "departments": [
+      {
+        "name": "FF Seewalchen am Attersee"
+      }
+    ]
+  },
+  {
+    "id": "E220102045",
+    "start": "2022-01-26T08:14:09+01:00",
+    "end": "2022-01-26T08:36:09+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "HANGSTRAßE 11",
+    "town": "ÖHNDORF",
+    "district": "Linz-Land",
+    "longitude": 14.187703,
+    "latitude": 48.214895,
+    "departments": [
+      {
+        "name": "FF Rutzing"
+      }
+    ]
+  },
+  {
+    "id": "E220102043",
+    "start": "2022-01-26T07:58:48+01:00",
+    "end": "2022-01-26T08:38:10+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "BAD HALLER STRAßE 34",
+    "town": "KREMSMüNSTER",
+    "district": "Kirchdorf",
+    "longitude": 14.150005,
+    "latitude": 48.05361,
+    "departments": [
+      {
+        "name": "FF Kremsmünster"
+      }
+    ]
+  },
+  {
+    "id": "E220102036",
+    "start": "2022-01-26T06:41:42+01:00",
+    "end": "2022-01-26T07:57:40+01:00",
+    "level": 1,
+    "type": "TEE",
+    "subtype": "VERKEHRSUNFALL AUFRÄUMARBEITEN",
+    "location": "SIERNING",
+    "town": null,
+    "district": "Steyr-Land",
+    "longitude": 14.313756,
+    "latitude": 48.037906,
+    "departments": [
+      {
+        "name": "FF Neuzeug-Sierninghofen"
+      },
+      {
+        "name": "FF Sierning"
+      }
+    ]
+  },
+  {
+    "id": "E220102034",
+    "start": "2022-01-26T01:20:53+01:00",
+    "end": "2022-01-26T01:59:46+01:00",
+    "level": 1,
+    "type": "BRAND",
+    "subtype": "BRANDMELDEALARM",
+    "location": "BAD HALLER STRAßE 32",
+    "town": "KREMSMüNSTER",
+    "district": "Kirchdorf",
+    "longitude": 14.151336,
+    "latitude": 48.053817,
+    "departments": [
+      {
+        "name": "FF Kremsmünster"
+      }
+    ]
+  }
+]
