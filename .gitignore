@@ -106,5 +106,5 @@ dist
 # JetBrains IDE
 .idea/
 
-Backend/venv
-Backend/service.json
+venv
+service.json
