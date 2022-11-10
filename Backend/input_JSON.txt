@@ -1,0 +1,1039 @@
+{
+  "webext2": true,
+  "version": "1.3.1",
+  "title": "Einsätze laufender Tag (seit 00:00)",
+  "pubDate": "Wed, 26 Jan 2022 16:58:04 +0100",
+  "cnt_feuerwehren": 24,
+  "cnt_einsaetze": 21,
+  "einsaetze": {
+    "0": {
+      "einsatz": {
+        "num1": "E220102098",
+        "einsatzort": "RO - ST. PETER AM WIMBERG",
+        "startzeit": "Wed, 26 Jan 2022 16:32:14 +0100",
+        "inzeit": "",
+        "status": "offen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "ALKLEIN",
+          "text": "KLEINALARM FEUERWEHREINSATZ (AL-MITTEL REDUZIERT)"
+        },
+        "einsatzsubtyp": {
+          "id": "1-TELEFON",
+          "text": "KLEINALARM"
+        },
+        "adresse": {
+          "default": "KASTEN 88",
+          "earea": "KASTEN",
+          "emun": "ST. PETER AM WIMBERG",
+          "efeanme": "KASTEN",
+          "estnum": "88",
+          "ecompl": "LANDWIRTSCHAFTSBETRIEB BARTOS KARL"
+        },
+        "wgs84": {
+          "lng": 14.076225,
+          "lat": 48.543266
+        },
+        "bezirk": {
+          "id": 9,
+          "text": "Rohrbach"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "409304": {
+            "feuerwehr": "FF Kasten"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "409304",
+            "fwname": "FF Kasten"
+          }
+        }
+      }
+    },
+    "1": {
+      "einsatz": {
+        "num1": "E220102096",
+        "einsatzort": "PE - ST. GEORGEN AN DER GUSEN",
+        "startzeit": "Wed, 26 Jan 2022 16:09:09 +0100",
+        "inzeit": "",
+        "status": "offen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "BRAND",
+          "text": "BRAND \"MITTEL\" FEUERWEHREINSATZ (A2+3: \"GROß\")"
+        },
+        "einsatzsubtyp": {
+          "id": "HAUS-BG",
+          "text": "BRAND WOHNHAUS"
+        },
+        "adresse": {
+          "default": "WIMMINGER STRAßE 25",
+          "earea": "ST. GEORGEN AN DER GUSEN",
+          "emun": "ST. GEORGEN AN DER GUSEN",
+          "efeanme": "WIMMINGER STRAßE",
+          "estnum": "25",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 14.447637,
+          "lat": 48.265117
+        },
+        "bezirk": {
+          "id": 7,
+          "text": "Perg"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "407217": {
+            "feuerwehr": "FF St. Georgen an der Gusen"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "407217",
+            "fwname": "FF St. Georgen an der Gusen"
+          }
+        }
+      }
+    },
+    "2": {
+      "einsatz": {
+        "num1": "E220102088",
+        "einsatzort": "PE - RIED IN DER RIEDMARK",
+        "startzeit": "Wed, 26 Jan 2022 14:22:48 +0100",
+        "inzeit": "Wed, 26 Jan 2022 14:28:49 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "SONSTIGE",
+        "einsatztyp": {
+          "id": "DISP",
+          "text": "SELBSTSTÄNDIGER FEUERWEHREINSATZ  (OHNE AL LWZ/BWST)"
+        },
+        "einsatzsubtyp": {
+          "id": "BMT-DI",
+          "text": "BRANDMELDETASTE GEDRÜCKT"
+        },
+        "adresse": {
+          "default": "RIED IN DER RIEDMARK ",
+          "earea": "RIED IN DER RIEDMARK",
+          "emun": "RIED IN DER RIEDMARK",
+          "efeanme": "RIED IN DER RIEDMARK",
+          "estnum": "",
+          "ecompl": "4221401-1"
+        },
+        "wgs84": {
+          "lng": 14.527746,
+          "lat": 48.270512
+        },
+        "bezirk": {
+          "id": 7,
+          "text": "Perg"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "407214": {
+            "feuerwehr": "FF Ried in der Riedmark"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "407214",
+            "fwname": "FF Ried in der Riedmark"
+          }
+        }
+      }
+    },
+    "3": {
+      "einsatz": {
+        "num1": "E220102086",
+        "einsatzort": "RI - ST. MARTIN IM INNKREIS",
+        "startzeit": "Wed, 26 Jan 2022 14:18:15 +0100",
+        "inzeit": "Wed, 26 Jan 2022 16:44:57 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "TK",
+          "text": "TECHNISCH \"KLEIN\" FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "SONSTIGE-TK",
+          "text": "TECHNISCHER EINSATZ KLEIN"
+        },
+        "adresse": {
+          "default": "BREITENAICH 88",
+          "earea": "BREITENAICH",
+          "emun": "ST. MARTIN IM INNKREIS",
+          "efeanme": "BREITENAICH",
+          "estnum": "88",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 13.427454,
+          "lat": 48.300879
+        },
+        "bezirk": {
+          "id": 8,
+          "text": "Ried im Innkreis"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "408317": {
+            "feuerwehr": "FF St. Martin im Innkreis"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "408317",
+            "fwname": "FF St. Martin im Innkreis"
+          }
+        }
+      }
+    },
+    "4": {
+      "einsatz": {
+        "num1": "E220102082",
+        "einsatzort": "RI - PRAMET",
+        "startzeit": "Wed, 26 Jan 2022 13:43:06 +0100",
+        "inzeit": "Wed, 26 Jan 2022 16:18:37 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "TK",
+          "text": "TECHNISCH \"KLEIN\" FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "OELSPUR-TK",
+          "text": "ÖLSPUR, ÖLAUSTRITT"
+        },
+        "adresse": {
+          "default": "PRAMET 59",
+          "earea": "PRAMET",
+          "emun": "PRAMET",
+          "efeanme": "PRAMET",
+          "estnum": "59",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 13.487224,
+          "lat": 48.142112
+        },
+        "bezirk": {
+          "id": 8,
+          "text": "Ried im Innkreis"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "408222": {
+            "feuerwehr": "FF Pramet"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "408222",
+            "fwname": "FF Pramet"
+          }
+        }
+      }
+    },
+    "5": {
+      "einsatz": {
+        "num1": "E220102079",
+        "einsatzort": "WL - PICHL BEI WELS",
+        "startzeit": "Wed, 26 Jan 2022 13:12:11 +0100",
+        "inzeit": "Wed, 26 Jan 2022 13:55:07 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "VU",
+          "text": "VERKEHRSUNFALL FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "AUFRAEUM-VU",
+          "text": "VERKEHRSUNFALL AUFRÄUMARBEITEN"
+        },
+        "adresse": {
+          "default": "FLIEDERSTRAßE 1",
+          "earea": "PICHL BEI WELS",
+          "emun": "PICHL BEI WELS",
+          "efeanme": "FLIEDERSTRAßE",
+          "estnum": "1",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 13.895332,
+          "lat": 48.18183
+        },
+        "bezirk": {
+          "id": 14,
+          "text": "Wels-Land"
+        },
+        "cntfeuerwehren": 2,
+        "feuerwehren": {
+          "414207": {
+            "feuerwehr": "FF Geisensheim"
+          },
+          "414217": {
+            "feuerwehr": "FF Pichl bei Wels"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "414207",
+            "fwname": "FF Geisensheim"
+          },
+          "1": {
+            "fwnr": "414217",
+            "fwname": "FF Pichl bei Wels"
+          }
+        }
+      }
+    },
+    "6": {
+      "einsatz": {
+        "num1": "E220102077",
+        "einsatzort": "KI - KREMSMÜNSTER",
+        "startzeit": "Wed, 26 Jan 2022 12:39:43 +0100",
+        "inzeit": "Wed, 26 Jan 2022 13:28:05 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA2-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "GREINERSTRAßE 70",
+          "earea": "KREMSMÜNSTER",
+          "emun": "KREMSMÜNSTER",
+          "efeanme": "GREINERSTRAßE",
+          "estnum": "70",
+          "ecompl": "00000-51081-1"
+        },
+        "wgs84": {
+          "lng": 14.120505,
+          "lat": 48.037776
+        },
+        "bezirk": {
+          "id": 5,
+          "text": "Kirchdorf"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "405304": {
+            "feuerwehr": "FF Kremsmünster"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "405304",
+            "fwname": "FF Kremsmünster"
+          }
+        }
+      }
+    },
+    "7": {
+      "einsatz": {
+        "num1": "E220102074",
+        "einsatzort": "RI - METTMACH",
+        "startzeit": "Wed, 26 Jan 2022 12:11:00 +0100",
+        "inzeit": "Wed, 26 Jan 2022 14:52:52 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "BK",
+          "text": "BRAND \"KLEIN\" FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "PKW-BK",
+          "text": "BRAND KFZ"
+        },
+        "adresse": {
+          "default": "MITTERDORF 83",
+          "earea": "MITTERDORF",
+          "emun": "METTMACH",
+          "efeanme": "MITTERDORF",
+          "estnum": "83",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 13.348304,
+          "lat": 48.163837
+        },
+        "bezirk": {
+          "id": 8,
+          "text": "Ried im Innkreis"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "408116": {
+            "feuerwehr": "FF Mettmach"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "408116",
+            "fwname": "FF Mettmach"
+          }
+        }
+      }
+    },
+    "8": {
+      "einsatz": {
+        "num1": "E220102071",
+        "einsatzort": "LL - ASTEN",
+        "startzeit": "Wed, 26 Jan 2022 12:05:24 +0100",
+        "inzeit": "Wed, 26 Jan 2022 12:41:22 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA1-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "KORNSPITZSTRAßE 1",
+          "earea": "ASTEN",
+          "emun": "ASTEN",
+          "efeanme": "KORNSPITZSTRAßE",
+          "estnum": "1",
+          "ecompl": "00000-61119-1"
+        },
+        "wgs84": {
+          "lng": 14.411086,
+          "lat": 48.214985
+        },
+        "bezirk": {
+          "id": 6,
+          "text": "Linz-Land"
+        },
+        "cntfeuerwehren": 2,
+        "feuerwehren": {
+          "406101": {
+            "feuerwehr": "FF Asten"
+          },
+          "406105": {
+            "feuerwehr": "FF Raffelstetten"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "406101",
+            "fwname": "FF Asten"
+          },
+          "1": {
+            "fwnr": "406105",
+            "fwname": "FF Raffelstetten"
+          }
+        }
+      }
+    },
+    "9": {
+      "einsatz": {
+        "num1": "E220102069",
+        "einsatzort": "LL - LEONDING",
+        "startzeit": "Wed, 26 Jan 2022 11:58:32 +0100",
+        "inzeit": "Wed, 26 Jan 2022 13:06:53 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "PERSON",
+        "einsatztyp": {
+          "id": "TEE",
+          "text": "TECHNISCH \"MITTEL\" FEUERWEHREINSATZ (A2+3: \"GROß\")"
+        },
+        "einsatzsubtyp": {
+          "id": "PERSON-TG",
+          "text": "PERSONENRETTUNG"
+        },
+        "adresse": {
+          "default": "RICHTERSTRAßE 34",
+          "earea": "HAAG",
+          "emun": "LEONDING",
+          "efeanme": "RICHTERSTRAßE",
+          "estnum": "34",
+          "ecompl": "KINDERKRIPPE KINDERKRIPPE RICHTERSTRAßE"
+        },
+        "wgs84": {
+          "lng": 14.264803,
+          "lat": 48.272172
+        },
+        "bezirk": {
+          "id": 6,
+          "text": "Linz-Land"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "406208": {
+            "feuerwehr": "FF Hart / LL"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "406208",
+            "fwname": "FF Hart / LL"
+          }
+        }
+      }
+    },
+    "10": {
+      "einsatz": {
+        "num1": "E220102067",
+        "einsatzort": "FR - WALDBURG",
+        "startzeit": "Wed, 26 Jan 2022 11:44:28 +0100",
+        "inzeit": "",
+        "status": "offen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "VU",
+          "text": "VERKEHRSUNFALL FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "AUFRAEUM-VU",
+          "text": "VERKEHRSUNFALL AUFRÄUMARBEITEN"
+        },
+        "adresse": {
+          "default": "WALDBURG",
+          "earea": "",
+          "emun": "WALDBURG",
+          "efeanme": "",
+          "estnum": "",
+          "ecompl": "B38 BÖHMERWALDSTRAßE KM 111.0 HÖHE MITTERREITH"
+        },
+        "wgs84": {
+          "lng": 14.420319,
+          "lat": 48.517012
+        },
+        "bezirk": {
+          "id": 2,
+          "text": "Freistadt"
+        },
+        "cntfeuerwehren": 2,
+        "feuerwehren": {
+          "402109": {
+            "feuerwehr": "FF Kefermarkt"
+          },
+          "402136": {
+            "feuerwehr": "FF Waldburg"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "402109",
+            "fwname": "FF Kefermarkt"
+          },
+          "1": {
+            "fwnr": "402136",
+            "fwname": "FF Waldburg"
+          }
+        }
+      }
+    },
+    "11": {
+      "einsatz": {
+        "num1": "E220102065",
+        "einsatzort": "BR - BRAUNAU AM INN",
+        "startzeit": "Wed, 26 Jan 2022 11:41:57 +0100",
+        "inzeit": "Wed, 26 Jan 2022 12:07:25 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA1-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "INDUSTRIEZEILE 1",
+          "earea": "HIMMELLINDACH",
+          "emun": "BRAUNAU AM INN",
+          "efeanme": "INDUSTRIEZEILE",
+          "estnum": "1",
+          "ecompl": "00000-1069-1"
+        },
+        "wgs84": {
+          "lng": 13.06839,
+          "lat": 48.250408
+        },
+        "bezirk": {
+          "id": 0,
+          "text": "Braunau"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "400102": {
+            "feuerwehr": "FF Braunau am Inn"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "400102",
+            "fwname": "FF Braunau am Inn"
+          }
+        }
+      }
+    },
+    "12": {
+      "einsatz": {
+        "num1": "E220102063",
+        "einsatzort": "UU - GALLNEUKIRCHEN",
+        "startzeit": "Wed, 26 Jan 2022 11:35:41 +0100",
+        "inzeit": "Wed, 26 Jan 2022 15:47:23 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "TK",
+          "text": "TECHNISCH \"KLEIN\" FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "OELSPUR-TK",
+          "text": "ÖLSPUR, ÖLAUSTRITT"
+        },
+        "adresse": {
+          "default": "GALLNEUKIRCHEN",
+          "earea": "GALLNEUKIRCHEN",
+          "emun": "GALLNEUKIRCHEN",
+          "efeanme": "",
+          "estnum": "",
+          "ecompl": "UFERWEG"
+        },
+        "wgs84": {
+          "lng": 14.410659,
+          "lat": 48.352603
+        },
+        "bezirk": {
+          "id": 12,
+          "text": "Urfahr-Umgebung"
+        },
+        "cntfeuerwehren": 3,
+        "feuerwehren": {
+          "412103": {
+            "feuerwehr": "FF Bad Leonfelden"
+          },
+          "412303": {
+            "feuerwehr": "FF Gallneukirchen"
+          },
+          "412313": {
+            "feuerwehr": "FF Schweinbach"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "412103",
+            "fwname": "FF Bad Leonfelden"
+          },
+          "1": {
+            "fwnr": "412303",
+            "fwname": "FF Gallneukirchen"
+          },
+          "2": {
+            "fwnr": "412313",
+            "fwname": "FF Schweinbach"
+          }
+        }
+      }
+    },
+    "13": {
+      "einsatz": {
+        "num1": "E220102058",
+        "einsatzort": "VB - MONDSEE",
+        "startzeit": "Wed, 26 Jan 2022 11:12:36 +0100",
+        "inzeit": "Wed, 26 Jan 2022 11:32:30 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA1-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "WALTER SIMMER-STRAßE 13",
+          "earea": "MONDSEE",
+          "emun": "MONDSEE",
+          "efeanme": "WALTER SIMMER-STRAßE",
+          "estnum": "13",
+          "ecompl": "00000-131115-1"
+        },
+        "wgs84": {
+          "lng": 13.331541,
+          "lat": 47.861297
+        },
+        "bezirk": {
+          "id": 13,
+          "text": "Vöcklabruck"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "413208": {
+            "feuerwehr": "FF Mondsee"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "413208",
+            "fwname": "FF Mondsee"
+          }
+        }
+      }
+    },
+    "14": {
+      "einsatz": {
+        "num1": "E220102054",
+        "einsatzort": "VB - SEEWALCHEN AM ATTERSEE",
+        "startzeit": "Wed, 26 Jan 2022 10:34:30 +0100",
+        "inzeit": "Wed, 26 Jan 2022 11:55:09 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "ALKLEIN",
+          "text": "KLEINALARM FEUERWEHREINSATZ (AL-MITTEL REDUZIERT)"
+        },
+        "einsatzsubtyp": {
+          "id": "1-TELEFON",
+          "text": "KLEINALARM"
+        },
+        "adresse": {
+          "default": "HAINING 39",
+          "earea": "HAINING",
+          "emun": "SEEWALCHEN AM ATTERSEE",
+          "efeanme": "HAINING",
+          "estnum": "39",
+          "ecompl": ""
+        },
+        "wgs84": {
+          "lng": 13.542891,
+          "lat": 47.941163
+        },
+        "bezirk": {
+          "id": 13,
+          "text": "Vöcklabruck"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "413510": {
+            "feuerwehr": "FF Kemating / VB"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "413510",
+            "fwname": "FF Kemating / VB"
+          }
+        }
+      }
+    },
+    "15": {
+      "einsatz": {
+        "num1": "E220102052",
+        "einsatzort": "VB - MONDSEE",
+        "startzeit": "Wed, 26 Jan 2022 09:33:05 +0100",
+        "inzeit": "Wed, 26 Jan 2022 10:00:11 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "BRAND",
+          "text": "BRAND \"MITTEL\" FEUERWEHREINSATZ (A2+3: \"GROß\")"
+        },
+        "einsatzsubtyp": {
+          "id": "GEWERBE-BG",
+          "text": "BRAND GEWERBE, INDUSTRIE"
+        },
+        "adresse": {
+          "default": "WALTER SIMMER-STRAßE 4",
+          "earea": "MONDSEE",
+          "emun": "MONDSEE",
+          "efeanme": "WALTER SIMMER-STRAßE",
+          "estnum": "4",
+          "ecompl": "INDUSTRIEBETRIEB BWT"
+        },
+        "wgs84": {
+          "lng": 13.330989,
+          "lat": 47.863691
+        },
+        "bezirk": {
+          "id": 13,
+          "text": "Vöcklabruck"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "413208": {
+            "feuerwehr": "FF Mondsee"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "413208",
+            "fwname": "FF Mondsee"
+          }
+        }
+      }
+    },
+    "16": {
+      "einsatz": {
+        "num1": "E220102050",
+        "einsatzort": "VB - SEEWALCHEN AM ATTERSEE",
+        "startzeit": "Wed, 26 Jan 2022 09:14:00 +0100",
+        "inzeit": "Wed, 26 Jan 2022 09:42:11 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA1-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "ATTERSEESTRAßE 7",
+          "earea": "SEEWALCHEN AM ATTERSEE",
+          "emun": "SEEWALCHEN AM ATTERSEE",
+          "efeanme": "ATTERSEESTRAßE",
+          "estnum": "7",
+          "ecompl": "00000-133111-1"
+        },
+        "wgs84": {
+          "lng": 13.598518,
+          "lat": 47.950234
+        },
+        "bezirk": {
+          "id": 13,
+          "text": "Vöcklabruck"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "413520": {
+            "feuerwehr": "FF Seewalchen am Attersee"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "413520",
+            "fwname": "FF Seewalchen am Attersee"
+          }
+        }
+      }
+    },
+    "17": {
+      "einsatz": {
+        "num1": "E220102045",
+        "einsatzort": "LL - HÖRSCHING",
+        "startzeit": "Wed, 26 Jan 2022 08:14:09 +0100",
+        "inzeit": "Wed, 26 Jan 2022 08:36:09 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA3-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "HANGSTRAßE 11",
+          "earea": "ÖHNDORF",
+          "emun": "HÖRSCHING",
+          "efeanme": "HANGSTRAßE",
+          "estnum": "11",
+          "ecompl": "00000-61178-1"
+        },
+        "wgs84": {
+          "lng": 14.187703,
+          "lat": 48.214895
+        },
+        "bezirk": {
+          "id": 6,
+          "text": "Linz-Land"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "406219": {
+            "feuerwehr": "FF Rutzing"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "406219",
+            "fwname": "FF Rutzing"
+          }
+        }
+      }
+    },
+    "18": {
+      "einsatz": {
+        "num1": "E220102043",
+        "einsatzort": "KI - KREMSMüNSTER",
+        "startzeit": "Wed, 26 Jan 2022 07:58:48 +0100",
+        "inzeit": "Wed, 26 Jan 2022 08:38:10 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA2-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "BAD HALLER STRAßE 34",
+          "earea": "KREMSMüNSTER",
+          "emun": "KREMSMüNSTER",
+          "efeanme": "BAD HALLER STRAßE",
+          "estnum": "34",
+          "ecompl": "00000-51075-1"
+        },
+        "wgs84": {
+          "lng": 14.150005,
+          "lat": 48.05361
+        },
+        "bezirk": {
+          "id": 5,
+          "text": "Kirchdorf"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "405304": {
+            "feuerwehr": "FF Kremsmünster"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "405304",
+            "fwname": "FF Kremsmünster"
+          }
+        }
+      }
+    },
+    "19": {
+      "einsatz": {
+        "num1": "E220102036",
+        "einsatzort": "SE - SIERNING",
+        "startzeit": "Wed, 26 Jan 2022 06:41:42 +0100",
+        "inzeit": "Wed, 26 Jan 2022 07:57:40 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "TEE",
+        "einsatztyp": {
+          "id": "VU",
+          "text": "VERKEHRSUNFALL FEUERWEHREINSATZ"
+        },
+        "einsatzsubtyp": {
+          "id": "AUFRAEUM-VU",
+          "text": "VERKEHRSUNFALL AUFRÄUMARBEITEN"
+        },
+        "adresse": {
+          "default": "SIERNING",
+          "earea": "",
+          "emun": "SIERNING",
+          "efeanme": "",
+          "estnum": "",
+          "ecompl": "KM 41.6 HÖHE B122 VORALPENSTRAßE"
+        },
+        "wgs84": {
+          "lng": 14.313756,
+          "lat": 48.037906
+        },
+        "bezirk": {
+          "id": 11,
+          "text": "Steyr-Land"
+        },
+        "cntfeuerwehren": 2,
+        "feuerwehren": {
+          "411209": {
+            "feuerwehr": "FF Neuzeug-Sierninghofen"
+          },
+          "411217": {
+            "feuerwehr": "FF Sierning"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "411209",
+            "fwname": "FF Neuzeug-Sierninghofen"
+          },
+          "1": {
+            "fwnr": "411217",
+            "fwname": "FF Sierning"
+          }
+        }
+      }
+    },
+    "20": {
+      "einsatz": {
+        "num1": "E220102034",
+        "einsatzort": "KI - KREMSMüNSTER",
+        "startzeit": "Wed, 26 Jan 2022 01:20:53 +0100",
+        "inzeit": "Wed, 26 Jan 2022 01:59:46 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA2-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "BAD HALLER STRAßE 32",
+          "earea": "KREMSMüNSTER",
+          "emun": "KREMSMüNSTER",
+          "efeanme": "BAD HALLER STRAßE",
+          "estnum": "32",
+          "ecompl": "00000-51077-1"
+        },
+        "wgs84": {
+          "lng": 14.151336,
+          "lat": 48.053817
+        },
+        "bezirk": {
+          "id": 5,
+          "text": "Kirchdorf"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "405304": {
+            "feuerwehr": "FF Kremsmünster"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "405304",
+            "fwname": "FF Kremsmünster"
+          }
+        }
+      }
+    }
+  }
+}
