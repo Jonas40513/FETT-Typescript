@@ -1,0 +1,35 @@
+{
+  "name": "fett",
+  "version": "1.0.0",
+  "description": "Fire Emergency Tracking Tool",
+  "main": "index.js",
+  "scripts": {
+	"start": "webpack serve",
+	"build": "webpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonas40513/FETT-Typescript.git"
+  },
+  "keywords": [
+    "fett"
+  ],
+  "author": "Jonas Bernsteiner, Felix Dieplinger, Florian Honeder",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Jonas40513/FETT-Typescript/issues"
+  },
+  "homepage": "https://github.com/Jonas40513/FETT-Typescript#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "lit-html": "^2.4.0"
+  }
+}
