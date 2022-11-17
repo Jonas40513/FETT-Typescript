@@ -7,7 +7,9 @@ class EmergencyService {
     async fetchEmergencies() {
         const response = await fetch(url)
         const emergencies = await response.json()
-        const nextState = produce(store.getValue(), draft => draft.emergencies = emergencies)
+        const nextState = produce(store.getValue(), draft => {
+            draft.emergencies = emergencies
+        })
         store.next(nextState)
     }
 }
