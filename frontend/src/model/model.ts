@@ -1,13 +1,13 @@
 import { Department } from "./department"
 
-export function getFormattedDate(start: Date, end: Date) {
+export function getFormattedDate(start: Date, end?: Date) {
     let result = new Date(start).toLocaleString()
     if (end)
         result += ` - ${new Date(end).toLocaleString()}`
     return result
 }
 
-export function getLocation(location: string, town: string, district: string) {
+export function getLocation(district: string, location?: string, town?: string) {
     let result = ""
     if (location) {
         result += `${location}, `
