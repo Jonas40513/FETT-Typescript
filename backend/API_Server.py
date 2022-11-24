@@ -23,32 +23,38 @@ firebase_app = firebase_admin.initialize_app(firebase_cred)
 
 
 def load_emergencies():
-    while True:
-        if app.debug:
-            print('Loading data')
-        old_emergencies = emergencies
-        emergencies.clear()
-        ff = requests.request("GET", "https://intranet-x.ooelfv.at/webext2/rss/json_2tage.txt").json()
-        for k, v in ff['einsaetze'].items():
-            emergency = v['einsatz']
-            emergencies.append({"id": v['einsatz']["num1"],
-                                "start": parse_date(emergency['startzeit']),
-                                "end": parse_date(emergency['inzeit']),
-                                "level": int(emergency['alarmstufe']),
-                                "type": str(emergency['einsatzart']),
-                                "subtype": str(emergency['einsatzsubtyp']['text']).strip(),
-                                "location": str(emergency['adresse']['default']).strip().replace('None', 'null'),
-                                "town": str(emergency['adresse']['earea']).strip(),
-                                "district": str(emergency['bezirk']['text']).strip(),
-                                "longitude": float(emergency['wgs84']['lng']),
-                                "latitude": float(emergency['wgs84']['lat']),
-                                "departments": get_departments(emergency)})
+    if app.debug:
+        print('Loading data')
+    old_emergencies = list(emergencies)
+    emergencies.clear()
+   # ff = requests.request("GET", "https://intranet-x.ooelfv.at/webext2/rss/json_2tage.txt").json()
 
-        new_emergencies = get_new_emergencies(old_emergencies, emergencies)
-        for i in new_emergencies:
-            print("Send")
-            send_topic_push("Neuer Einsatz", "Neuer Einsatz", i.town)
-        time.sleep(60)
+    ff = json.loads(
+        open("S:\\5BHIF\\NVS\\MobileComputing\\Project\\FETT-Typescript\\backend\\input_JSON.txt", "r").read())
+    print(type(ff))
+    for k, v in ff['einsaetze'].items():
+        emergency = v['einsatz']
+        emergencies.append({"id": v['einsatz']["num1"],
+                            "start": parse_date(emergency['startzeit']),
+                            "end": parse_date(emergency['inzeit']),
+                            "level": int(emergency['alarmstufe']),
+                            "type": str(emergency['einsatzart']),
+                            "subtype": str(emergency['einsatzsubtyp']['text']).strip(),
+                            "location": str(emergency['adresse']['default']).strip().replace('None', 'null'),
+                            "town": str(emergency['adresse']['earea']).strip(),
+                            "district": str(emergency['bezirk']['text']).strip(),
+                            "longitude": float(emergency['wgs84']['lng']),
+                            "latitude": float(emergency['wgs84']['lat']),
+                            "departments": get_departments(emergency)})
+
+    new_emergencies = get_new_emergencies(old_emergencies, emergencies)
+    print(len(old_emergencies))
+    print(len(emergencies))
+    for i in new_emergencies:
+        if(i["id"]!=""):
+            for department in i["departments"]:
+                print(department["name"])
+                #send_topic_push("Neuer Einsatz", "Neuer Einsatz", i["town"])
 
 
 def get_departments(emergency):
@@ -83,6 +89,7 @@ def send_topic_push(title, body, topic_name):
 
 @app.route('/emergencies')
 def emergencies_route():
+    load_emergencies()
     response = app.response_class(
         response=json.dumps(emergencies),
         mimetype='application/json'
@@ -98,7 +105,7 @@ def check_debug():
 
 if __name__ == '__main__':
     print("Test")
-    x = threading.Thread(target=load_emergencies, daemon=True)
-    x.start()
+    # x = threading.Thread(target=load_emergencies, daemon=True)
+    # x.start()
     print("Test")
     app.run(host='0.0.0.0', port=1220, debug=True)
