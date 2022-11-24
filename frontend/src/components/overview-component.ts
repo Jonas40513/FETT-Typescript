@@ -17,7 +17,8 @@ const tableTemplate = html`
                 <th>Ort</th>
             </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+        </tbody>
     </table>`
 
 const rowTemplate = (emergency: Emergency) => html`
@@ -43,7 +44,7 @@ class OverviewComponent extends HTMLElement {
         emergencies.forEach(emergency => {
             const row = tBody.insertRow()
             row.onclick = () => {
-                const event = new CustomEvent("emergency-selected", { detail: { emergency: emergency } })
+                const event = new CustomEvent("emergency-selected", { detail: { emergencyId: emergency.id } })
                 this.dispatchEvent(event)
             }
             row.classList.add("w3-hover-opacity")
