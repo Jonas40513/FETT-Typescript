@@ -92,6 +92,7 @@ def get_new_emergencies(old_emergencies, new_emergencies):
 
 @app.route('/emergencies')
 def emergencies_route():
+    load_emergencies()
     response = app.response_class(
         response=json.dumps(emergencies),
         mimetype='application/json'
