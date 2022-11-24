@@ -4,9 +4,10 @@ import store from "../model/store"
 import { Emergency } from "../model/emergency"
 import emergencyService from "../emergency-service"
 import { getFormattedDate, getLocation, getIcon } from "../model/model"
+import { w3css } from "../properties"
 
 const tableTemplate = html`
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href=${w3css}>
     <table class="w3-table w3-striped w3-bordered">
         <thead>
             <tr>
@@ -45,6 +46,7 @@ class OverviewComponent extends HTMLElement {
                 const event = new CustomEvent("emergency-selected", { detail: { emergency: emergency } })
                 this.dispatchEvent(event)
             }
+            row.classList.add("w3-hover-opacity")
             render(rowTemplate(emergency), row)
         })
     }
