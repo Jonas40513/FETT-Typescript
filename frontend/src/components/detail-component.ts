@@ -30,8 +30,9 @@ class DetailComponent extends HTMLElement {
     }
 
     attributeChangedCallback(name: string, oldValue: string, value: string) {
-        this.render(store.getValue().emergencies.find((x) => x.id == value))
+        this.render(store.getValue().emergencies.find((emergency) => emergency.id == value))
     }
+
     private render(emergency: Emergency) {
         render(tableTemplate, this.shadowRoot)
         const tBody = this.shadowRoot.querySelector("tbody")
