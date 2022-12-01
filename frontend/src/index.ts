@@ -10,7 +10,7 @@ link.href = w3css
 head.appendChild(link)
 
 const body = document.querySelector("body")
-const appComponent = document.createElement("app-component")
+const appComponent = document.createElement("map-component")
 body.appendChild(appComponent)
 
 emergencyService.fetchEmergencies()
