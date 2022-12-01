@@ -17,7 +17,7 @@ class AppComponent extends HTMLElement {
     render() {
         render(appComponentTemplate, this.shadowRoot)
         const overviewComponent = this.shadowRoot.getElementById("table")
-        const detailComponent: HTMLElement = this.shadowRoot.getElementById("detail")
+        const detailComponent = this.shadowRoot.getElementById("detail")
         overviewComponent.addEventListener("emergency-selected", (e: CustomEvent) => {
             const emergencyId = e.detail.emergencyId
             detailComponent.setAttribute("emergency-id", emergencyId)
