@@ -2,9 +2,9 @@ import { html, render } from "lit-html"
 
 import store from "../model/store"
 import { Emergency } from "../model/emergency"
-import emergencyService from "../emergency-service"
 import { getFormattedDate, getLocation, getIcon } from "../model/model"
 import { w3css } from "../properties"
+import router from "../router"
 
 const tableTemplate = html`
     <link rel="stylesheet" href=${w3css}>
@@ -33,9 +33,8 @@ class OverviewComponent extends HTMLElement {
         this.attachShadow({ mode: "open" })
     }
 
-    async connectedCallback() {
+    connectedCallback() {
         store.subscribe(model => this.render(model.emergencies))
-        emergencyService.fetchEmergencies()
     }
 
     private render(emergencies: Emergency[]) {
@@ -44,8 +43,7 @@ class OverviewComponent extends HTMLElement {
         emergencies.forEach(emergency => {
             const row = tBody.insertRow()
             row.onclick = () => {
-                const event = new CustomEvent("emergency-selected", { detail: { emergencyId: emergency.id } })
-                this.dispatchEvent(event)
+                router.navigate(`/emergency/${emergency.id}`)
             }
             row.classList.add("w3-hover-opacity")
             render(rowTemplate(emergency), row)

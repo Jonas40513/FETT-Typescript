@@ -29,11 +29,14 @@ class DetailComponent extends HTMLElement {
         this.attachShadow({ mode: "open" })
     }
 
-    attributeChangedCallback(name: string, oldValue: string, value: string) {
-        this.render(store.getValue().emergencies.find((emergency) => emergency.id == value))
+    connectedCallback() {
+        store.subscribe(model => this.render(model.emergencies.find((emergency) => emergency.id == store.getValue().selected)))
     }
 
     private render(emergency: Emergency) {
+        if (emergency === undefined) {
+            return
+        }
         render(tableTemplate, this.shadowRoot)
         const tBody = this.shadowRoot.querySelector("tbody")
         render(rowTemplate(emergency), tBody)
