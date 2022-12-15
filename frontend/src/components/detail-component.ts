@@ -4,12 +4,20 @@ import store from "../model/store"
 import { Emergency } from "../model/emergency"
 import { getFormattedDate, getLocation, getDepartments } from "../model/model"
 import { w3css } from "../properties"
+import "./map-component"
 
-const tableTemplate = html`
-    <link rel="stylesheet" href=${w3css}>
-    <table class="w3-table w3-striped w3-bordered">
-        <tbody></tbody>
-    </table>`
+const tableTemplate = (emergency: Emergency) => html`
+        <link rel="stylesheet" href=${w3css}>
+        <div id="details" style="display: grid;
+                                height: 100vh;
+                                grid-template-rows: 1fr 1fr;"
+                                >
+            <table class="w3-table w3-striped w3-bordered">
+                <tbody></tbody>
+            </table>
+            <map-component emergency-id="${emergency.id}"></map-component>
+        </div>
+    `
 
 const rowTemplate = (emergency: Emergency) => html`
     <tr><th>Einsatznummer</th><td>${emergency.id}</td></tr>
@@ -37,7 +45,7 @@ class DetailComponent extends HTMLElement {
         if (emergency === undefined) {
             return
         }
-        render(tableTemplate, this.shadowRoot)
+        render(tableTemplate(emergency), this.shadowRoot)
         const tBody = this.shadowRoot.querySelector("tbody")
         render(rowTemplate(emergency), tBody)
     }

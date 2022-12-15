@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Jonas40513/FETT-Typescript#readme",
   "devDependencies": {
+    "@types/leaflet": "^1.9.0",
     "html-webpack-plugin": "^5.5.0",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.4",
@@ -31,6 +32,7 @@
   },
   "dependencies": {
     "immer": "^9.0.16",
+    "leaflet": "^1.9.3",
     "lit-html": "^2.5.0",
     "navigo": "^8.11.1",
     "rxjs": "^7.6.0"
