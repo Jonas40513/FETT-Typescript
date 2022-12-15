@@ -33,6 +33,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "i18next": "^22.0.6",
     "immer": "^9.0.16",
     "leaflet": "^1.9.3",
     "lit-html": "^2.5.0",

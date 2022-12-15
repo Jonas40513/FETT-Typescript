@@ -7,8 +7,9 @@ import requests
 from flask import Flask
 from flask import json
 from flask_cors import CORS
-import firebase_admin
-from firebase_admin import credentials, messaging
+
+# import firebase_admin
+# from firebase_admin import credentials, messaging
 
 app = Flask(__name__)
 CORS(app)
@@ -16,10 +17,11 @@ UPDATE_DELAY = 10
 emergencies = []
 last_update = -1
 
+
 # Change Path
-firebase_cred = credentials.Certificate(
-    "S:\\5BHIF\\NVS\\MobileComputing\\Project\\FETT-Typescript\\Backend\\service.json")
-firebase_app = firebase_admin.initialize_app(firebase_cred)
+# firebase_cred = credentials.Certificate(
+#   "S:\\5BHIF\\NVS\\MobileComputing\\Project\\FETT-Typescript\\Backend\\service.json")
+# firebase_app = firebase_admin.initialize_app(firebase_cred)
 
 
 def load_emergencies():
@@ -37,7 +39,7 @@ def load_emergencies():
                                 "level": int(emergency['alarmstufe']),
                                 "type": str(emergency['einsatzart']),
                                 "subtype": str(emergency['einsatzsubtyp']['text']).strip(),
-                                "location": str(emergency['adresse']['default']).strip().replace('None', 'null'),
+                                "location": check_location(str(emergency['adresse']['default'])),
                                 "town": str(emergency['adresse']['earea']).strip(),
                                 "district": str(emergency['bezirk']['text']).strip(),
                                 "longitude": float(emergency['wgs84']['lng']),
@@ -47,7 +49,7 @@ def load_emergencies():
         new_emergencies = get_new_emergencies(old_emergencies, emergencies)
         for i in new_emergencies:
             print("Send")
-            send_topic_push("Neuer Einsatz", "Neuer Einsatz", i.town)
+        # send_topic_push("Neuer Einsatz", "Neuer Einsatz", i.town)
         time.sleep(60)
 
 
@@ -65,20 +67,27 @@ def parse_date(date):
     return str(a).replace(" ", "T")
 
 
+def check_location(location):
+    location = location.strip()
+    if location == "" or location == "None":
+        return None
+    return location
+
+
 def get_new_emergencies(old_emergencies, new_emergencies):
     return [em for em in new_emergencies if em not in old_emergencies]
 
 
-def send_topic_push(title, body, topic_name):
-    topic = topic_name
-    message = messaging.Message(
-        notification=messaging.Notification(
-            title=title,
-            body=body
-        ),
-        topic=topic
-    )
-    messaging.send(message)
+# def send_topic_push(title, body, topic_name):
+#    topic = topic_name
+#    message = messaging.Message(
+#        notification=messaging.Notification(
+#            title=title,
+#            body=body
+#        ),
+#        topic=topic
+#    )
+#    messaging.send(message)
 
 
 @app.route('/emergencies')
