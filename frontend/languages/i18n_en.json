@@ -3,6 +3,7 @@
     "date":"Date",
     "level": "Emergencylevel",
     "emergencyType": "Emergency Type",
+    "title":"Title",
     "type":"Typ",
     "place": "Place",
     "departments":"Departments"
