@@ -45,7 +45,7 @@ class DetailComponent extends HTMLElement {
         if (emergency === undefined) {
             return
         }
-        render(tableTemplate, this.shadowRoot)
+        render(tableTemplate(emergency), this.shadowRoot)
         const tBody = this.shadowRoot.querySelector("tbody")
         render(rowTemplate(emergency), tBody)
     }

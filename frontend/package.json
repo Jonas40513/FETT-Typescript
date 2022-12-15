@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "immer": "^9.0.16",
+    "leaflet": "^1.9.3",
     "lit-html": "^2.5.0",
     "navigo": "^8.11.1",
     "rxjs": "^7.6.0"
