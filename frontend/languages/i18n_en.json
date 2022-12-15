@@ -1,0 +1,9 @@
+{
+    "id": "Emergencynumber",
+    "date":"Date",
+    "level": "Emergencylevel",
+    "emergencyType": "Emergency Type",
+    "type":"Typ",
+    "place": "Place",
+    "departments":"Departments"
+    }
