@@ -3,12 +3,12 @@ import "./overview-component"
 import * as L from 'leaflet';
 import store from "../model/store"
 import { Emergency } from "../model/emergency";
-import { Icon } from 'leaflet'
 import { w3css } from "../properties"
+import { getLocation } from "../model/model"
 
 const mapComponentTemplate = html`
     <link rel="stylesheet" href=${w3css}>
-    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="../../res/leaflet.css">
     <div id="map" class="w3-container" style="height:100%"></div>`
 
 class MapComponent extends HTMLElement {
@@ -19,9 +19,14 @@ class MapComponent extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: '../../res/images/marker-icon-2x.png',
+            iconUrl: '../../res/images/marker-icon.png',
+            shadowUrl: '../../res/images/marker-shadow.png',
+        });
     }
     attributeChangedCallback(name: string, oldValue: string, value: string) {
-        this.render(store.getValue().emergencies.find((emergency) => emergency.id == value))
+        this.render(store.getValue().emergencies.find((emergency) => emergency.id === value))
     }
 
     render(emergency: Emergency) {
@@ -34,10 +39,8 @@ class MapComponent extends HTMLElement {
                 zoom: 8,
             });
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-            const marker = new L.Marker(
-                [emergency.latitude, emergency.longitude],
-                { icon: new Icon({ iconUrl: "../../images/marker-icon-2x.png", iconSize: [25, 41], iconAnchor: [12, 41] }) }
-            );
+            const marker = new L.Marker([emergency.latitude, emergency.longitude]);
+            marker.bindPopup("<b>" + emergency.subtype + "</b><br>" + getLocation(emergency.district, emergency.location, emergency.town)).openPopup()
             marker.addTo(map);
             setInterval(function () {
                 map.invalidateSize();
