@@ -3,26 +3,27 @@ import "./overview-component"
 import * as L from 'leaflet';
 import store from "../model/store"
 import { Emergency } from "../model/emergency";
-import emergencyService from "../emergency-service";
+import { Icon } from 'leaflet'
+import { w3css } from "../properties"
 
 const mapComponentTemplate = html`
+    <link rel="stylesheet" href=${w3css}>
     <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
-    <div id="map" style="width: 100%;height: 60vh"></div>`
+    <div id="map" class="w3-container" style="height:100%"></div>`
 
 class MapComponent extends HTMLElement {
     static get observedAttributes() {
-        return ["index"]
+        return ["emergency-id"]
     }
 
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
     }
-    connectedCallback() {
-        emergencyService.fetchEmergencies()
-        store.subscribe(model => this.render(model.emergencies[index]))
-
+    attributeChangedCallback(name: string, oldValue: string, value: string) {
+        this.render(store.getValue().emergencies.find((emergency) => emergency.id == value))
     }
+
     render(emergency: Emergency) {
         let map: L.Map;
         render(mapComponentTemplate, this.shadowRoot)
@@ -33,13 +34,15 @@ class MapComponent extends HTMLElement {
                 zoom: 8,
             });
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-            if (emergency != null) {
-                const marker = new L.Marker([emergency.latitude, emergency.longitude]);
-                marker.addTo(map);
-                setInterval(function () {
-                    map.invalidateSize();
-                }, 100);
-            }
+            const marker = new L.Marker(
+                [emergency.latitude, emergency.longitude],
+                { icon: new Icon({ iconUrl: "../../images/marker-icon-2x.png", iconSize: [25, 41], iconAnchor: [12, 41] }) }
+            );
+            marker.addTo(map);
+            setInterval(function () {
+                map.invalidateSize();
+            }, 100);
+
         }
     }
 }

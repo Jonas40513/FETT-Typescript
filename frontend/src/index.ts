@@ -8,5 +8,5 @@ link.href = w3css
 head.appendChild(link)
 
 const body = document.querySelector("body")
-const appComponent = document.createElement("map-component")
+const appComponent = document.createElement("app-component")
 body.appendChild(appComponent)
