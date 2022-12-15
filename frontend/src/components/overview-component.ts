@@ -5,16 +5,17 @@ import { Emergency } from "../model/emergency"
 import emergencyService from "../emergency-service"
 import { getFormattedDate, getLocation, getIcon } from "../model/model"
 import { w3css } from "../properties"
-
+import "../i18next"
+import i18next from "i18next"
 const tableTemplate = html`
     <link rel="stylesheet" href=${w3css}>
     <table class="w3-table w3-striped w3-bordered">
         <thead>
             <tr>
-                <th>Einsatzart</th>
-                <th>Titel</th>
-                <th>Datum</th>
-                <th>Ort</th>
+                <th>${i18next.t('emergencyType')}</th>
+                <th>${i18next.t('title')}</th>
+                <th>${i18next.t('date')}</th>
+                <th>${i18next.t('place')}</th>
             </tr>
         </thead>
         <tbody>
