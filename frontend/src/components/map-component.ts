@@ -27,7 +27,7 @@ class MapComponent extends HTMLElement {
     render(emergency: Emergency) {
         let map: L.Map;
         render(mapComponentTemplate, this.shadowRoot)
-        var container = L.DomUtil.get(this.shadowRoot.getElementById("map"));
+        let container = L.DomUtil.get(this.shadowRoot.getElementById("map"));
         if (!container.hasChildNodes()) {
             map = new L.Map(this.shadowRoot.getElementById("map"), {
                 center: new L.LatLng(48.10, 14.24),
