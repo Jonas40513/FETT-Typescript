@@ -23,15 +23,16 @@
   "homepage": "https://github.com/Jonas40513/FETT-Typescript#readme",
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
-    "ts-loader": "^9.4.1",
-    "typescript": "^4.8.4",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "immer": "^9.0.16",
-    "lit-html": "^2.4.0",
-    "rxjs": "^7.5.7"
+    "lit-html": "^2.5.0",
+    "navigo": "^8.11.1",
+    "rxjs": "^7.6.0"
   }
 }

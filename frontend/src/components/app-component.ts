@@ -1,29 +1,32 @@
 import { html, render } from "lit-html"
 import "./overview-component"
 import "./detail-component"
-const appComponentTemplate = html`
-    <overview-component id="table"></overview-component>
-    <detail-component id="detail"></detail-component>`
+import router from "../router"
+import store from "../model/store"
+import produce from "immer"
+
+const overviewComponentTemplate = html`
+    <overview-component></overview-component>`
+
+const detailComponentTemplate = (emergencyId: string) => html`
+    <detail-component emergency-id=${emergencyId}></detail-component>`
 
 class AppComponent extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
     }
-    connectedCallback() {
-        this.render()
 
-    }
-    render() {
-        render(appComponentTemplate, this.shadowRoot)
-        const overviewComponent = this.shadowRoot.getElementById("table")
-        const detailComponent = this.shadowRoot.getElementById("detail")
-        overviewComponent.addEventListener("emergency-selected", (e: CustomEvent) => {
-            const emergencyId = e.detail.emergencyId
-            detailComponent.setAttribute("emergency-id", emergencyId)
-            overviewComponent.style.display = "none"
-            detailComponent.style.display = "block"
-        })
+    connectedCallback() {
+        router.on("/", () => {
+            render(overviewComponentTemplate, this.shadowRoot)
+        }).on("/emergency/:id", ({ data }) => {
+            const nextState = produce(store.getValue(), draft => {
+                draft.selected = data.id
+            })
+            store.next(nextState)
+            render(detailComponentTemplate(data.id), this.shadowRoot)
+        }).resolve()
     }
 }
 

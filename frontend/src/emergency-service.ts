@@ -3,7 +3,6 @@ import { Emergency } from "./model/emergency"
 import store from "./model/store"
 import { url } from "./properties"
 
-
 class EmergencyService {
     async fetchEmergencies() {
         const response = await fetch(url)
