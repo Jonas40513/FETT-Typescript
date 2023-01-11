@@ -42,7 +42,7 @@ def load_emergencies():
         new_emergencies = get_new_emergencies(old_emergencies, emergencies)
         for i in new_emergencies:
             print("Send")
-            sendToAll(i.town)
+            sendToAll(i.town, i.id)
         time.sleep(60)
 
 
@@ -71,17 +71,17 @@ def get_new_emergencies(old_emergencies, new_emergencies):
     return [em for em in new_emergencies if em not in old_emergencies]
 
 
-def sendToAll(name):
+def sendToAll(name, id):
     for i in subscriptions:
         print(i)
-        sendNotification(name, i)
+        sendNotification(name,id, i)
 
 
-def sendNotification(name, subscription_info):
+def sendNotification(name,id, subscription_info):
     try:
         webpush(
             subscription_info=subscription_info,
-            data=json.dumps({"title": "Neuer Einsatz", "body": str(name)}),
+            data=json.dumps({"title": "Neuer Einsatz", "body": str(name),"id":str(id)}),
             vapid_private_key="QJaFsqMp6ODGVJZCfSQOcEEvgO-bffRytvO0HUxI5Ww",
             vapid_claims={
                 "sub": "mailto:example@yourdomain.org",
@@ -122,7 +122,7 @@ def notification_subscribe():
 
 @app.route("/test")
 def sendTest():
-    sendToAll("FF Lungitz")
+    sendToAll("FF Lungitz","E230100799")
     return '', 204
 
 
