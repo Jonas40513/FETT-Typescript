@@ -122,7 +122,7 @@ def notification_subscribe():
 
 @app.route("/test")
 def sendTest():
-    sendToAll("FF Lungitz","E230100799")
+    sendToAll("FF Lungitz",emergencies[0]["id"])
     return '', 204
 
 
