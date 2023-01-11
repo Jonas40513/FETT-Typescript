@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/index.ts',
@@ -10,7 +11,7 @@ module.exports = {
                 test: /\.ts?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
-            },
+            }
         ],
     },
     resolve: {
@@ -24,6 +25,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'FETT'
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "node_modules/leaflet/dist/", to: "res/" },
+            ],
         })
     ],
     devtool: 'cheap-source-map',
