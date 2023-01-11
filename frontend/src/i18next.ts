@@ -1,13 +1,10 @@
-import i18next from 'i18next'
-import { TestScheduler } from 'rxjs/testing';
-
+import i18next from "i18next"
 
 import translationDE from "../languages/i18n_de.json"
 import translationEN from "../languages/i18n_en.json"
 
-console.log(navigator.language)
 i18next.init({
-    fallbackLng: 'de',
+    fallbackLng: "de",
     lng: navigator.language,
     debug: true,
     resources: {
@@ -18,6 +15,6 @@ i18next.init({
             translation: translationDE
         }
     }
-});
+})
 
 export default i18next

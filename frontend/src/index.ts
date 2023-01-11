@@ -1,5 +1,5 @@
 import "./components/app-component"
-import { subsribeUrl, w3css } from "./properties"
+import { subscribeUrl, w3css } from "./properties"
 import "./model/store"
 import emergencyService from "./emergency-service"
 
@@ -16,25 +16,25 @@ body.appendChild(appComponent)
 emergencyService.fetchEmergencies()
 
 async function subscribe() {
-    let sw = await navigator.serviceWorker.ready;
+    let sw = await navigator.serviceWorker.ready
     let push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey:
-            'BAxxCtddG2073Gixr4PQdzukDGWT0he3q7PNiSESchoyfCEqfTlq9W-XSymOinYJTe04r4SI0fuQlTJu1Z67LKw'
-    });
-    await fetch(subsribeUrl, {
-        method: 'POST',
+            "BAxxCtddG2073Gixr4PQdzukDGWT0he3q7PNiSESchoyfCEqfTlq9W-XSymOinYJTe04r4SI0fuQlTJu1Z67LKw"
+    })
+    await fetch(subscribeUrl, {
+        method: "POST",
         body: JSON.stringify(push),
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         }
-    });
+    })
 }
 
-if ('serviceWorker' in navigator) {
-    addEventListener('load', async () => {
-        await navigator.serviceWorker.register('/sw.js', { scope: "/" });
-    });
+if ("serviceWorker" in navigator) {
+    addEventListener("load", async () => {
+        await navigator.serviceWorker.register("/sw.js", { scope: "/" })
+    })
 }
 
 if (!(Notification.permission === "denied" || Notification.permission === "default")) {
@@ -42,7 +42,7 @@ if (!(Notification.permission === "denied" || Notification.permission === "defau
         if (permission === "granted") {
             subscribe()
         }
-    });
+    })
 }
 else {
     subscribe()

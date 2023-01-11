@@ -13,10 +13,10 @@ const tableTemplate = html`
     <table class="w3-table w3-striped w3-bordered">
         <thead>
             <tr>
-                <th>${i18next.t('emergencyType')}</th>
-                <th>${i18next.t('title')}</th>
-                <th>${i18next.t('date')}</th>
-                <th>${i18next.t('place')}</th>
+                <th>${i18next.t("emergencyType")}</th>
+                <th>${i18next.t("title")}</th>
+                <th>${i18next.t("date")}</th>
+                <th>${i18next.t("place")}</th>
             </tr>
         </thead>
         <tbody>

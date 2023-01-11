@@ -42,7 +42,7 @@ def load_emergencies():
         new_emergencies = get_new_emergencies(old_emergencies, emergencies)
         for i in new_emergencies:
             print("Send")
-            sendToAll(i.town, i.id)
+            send_to_all(i.town, i.id, i.longitude, i.latitude)
         time.sleep(60)
 
 
@@ -71,17 +71,17 @@ def get_new_emergencies(old_emergencies, new_emergencies):
     return [em for em in new_emergencies if em not in old_emergencies]
 
 
-def sendToAll(name, id):
+def send_to_all(name, id, longitude, latitude):
     for i in subscriptions:
         print(i)
-        sendNotification(name,id, i)
+        send_notification(name, id, longitude, latitude, i)
 
 
-def sendNotification(name,id, subscription_info):
+def send_notification(name, id, longitude, latitude, subscription_info):
     try:
         webpush(
             subscription_info=subscription_info,
-            data=json.dumps({"title": "Neuer Einsatz", "body": str(name),"id":str(id)}),
+            data=json.dumps({"title": "Neuer Einsatz", "body": str(name),"id":str(id), "navigation": f"https://www.google.com/maps/dir/?api=1&destination={latitude},%20{longitude}&travelmode=driving"}),
             vapid_private_key="QJaFsqMp6ODGVJZCfSQOcEEvgO-bffRytvO0HUxI5Ww",
             vapid_claims={
                 "sub": "mailto:example@yourdomain.org",
@@ -121,8 +121,8 @@ def notification_subscribe():
 
 
 @app.route("/test")
-def sendTest():
-    sendToAll("FF Lungitz",emergencies[0]["id"])
+def send_test():
+    send_to_all("FF Lungitz", emergencies[0]["id"], 14.581479, 48.270588)
     return '', 204
 
 

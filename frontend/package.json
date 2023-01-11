@@ -34,11 +34,11 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "i18next": "^22.0.6",
-    "immer": "^9.0.16",
+    "i18next": "^22.4.9",
+    "immer": "^9.0.17",
     "leaflet": "^1.9.3",
-    "lit-html": "^2.5.0",
+    "lit-html": "^2.6.0",
     "navigo": "^8.11.1",
-    "rxjs": "^7.6.0"
+    "rxjs": "^7.8.0"
   }
 }
