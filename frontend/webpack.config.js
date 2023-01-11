@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const CopyPlugin = require("copy-webpack-plugin");
+const { ServiceWorkerPlugin } = require("service-worker-webpack");
 
 module.exports = {
     entry: './src/index.ts',
@@ -30,7 +31,15 @@ module.exports = {
             patterns: [
                 { from: "node_modules/leaflet/dist/", to: "res/" },
             ],
-        })
+        }),
+        new ServiceWorkerPlugin(
+            {
+                registration: {
+                    autoRegister: false,
+                    path: "./sw.js"
+                }
+            }
+        )
     ],
     devtool: 'cheap-source-map',
     devServer: {
