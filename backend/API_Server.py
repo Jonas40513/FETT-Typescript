@@ -4,24 +4,17 @@ from datetime import datetime
 import threading
 
 import requests
-from flask import Flask
+from flask import Flask, request
 from flask import json
 from flask_cors import CORS
-
-# import firebase_admin
-# from firebase_admin import credentials, messaging
+from pywebpush import webpush, WebPushException
 
 app = Flask(__name__)
 CORS(app)
 UPDATE_DELAY = 10
 emergencies = []
 last_update = -1
-
-
-# Change Path
-# firebase_cred = credentials.Certificate(
-#   "S:\\5BHIF\\NVS\\MobileComputing\\Project\\FETT-Typescript\\Backend\\service.json")
-# firebase_app = firebase_admin.initialize_app(firebase_cred)
+subscriptions = []
 
 
 def load_emergencies():
@@ -49,7 +42,7 @@ def load_emergencies():
         new_emergencies = get_new_emergencies(old_emergencies, emergencies)
         for i in new_emergencies:
             print("Send")
-        # send_topic_push("Neuer Einsatz", "Neuer Einsatz", i.town)
+            sendToAll(i.town)
         time.sleep(60)
 
 
@@ -78,27 +71,59 @@ def get_new_emergencies(old_emergencies, new_emergencies):
     return [em for em in new_emergencies if em not in old_emergencies]
 
 
-# def send_topic_push(title, body, topic_name):
-#    topic = topic_name
-#    message = messaging.Message(
-#        notification=messaging.Notification(
-#            title=title,
-#            body=body
-#        ),
-#        topic=topic
-#    )
-#    messaging.send(message)
+def sendToAll(name):
+    for i in subscriptions:
+        print(i)
+        sendNotification(name, i)
+
+
+def sendNotification(name, subscription_info):
+    try:
+        webpush(
+            subscription_info=subscription_info,
+            data=json.dumps({"title": "Neuer Einsatz", "body": str(name)}),
+            vapid_private_key="QJaFsqMp6ODGVJZCfSQOcEEvgO-bffRytvO0HUxI5Ww",
+            vapid_claims={
+                "sub": "mailto:example@yourdomain.org",
+            }
+        )
+    except WebPushException as ex:
+        # Mozilla returns additional information in the body of the response.
+        if ex.response and ex.response.json():
+            extra = ex.response.json()
+            print("Remote service replied with a {}:{}, {}",
+                  extra.code,
+                  extra.errno,
+                  extra.message
+                  )
+            subscriptions.remove(subscription_info)
 
 
 @app.route('/emergencies')
 def emergencies_route():
-    load_emergencies()
     response = app.response_class(
         response=json.dumps(emergencies),
         mimetype='application/json'
     )
 
     return response
+
+
+@app.route("/subscribe", methods=['POST'])
+def notification_subscribe():
+    data = request.data
+    data = str(data).replace('"expirationTime":null,', "").replace("b'", "").replace("'", "")
+    a = json.loads(data)
+    if a not in subscriptions:
+        print("Append")
+        subscriptions.append(a)
+    return '', 204
+
+
+@app.route("/test")
+def sendTest():
+    sendToAll("FF Lungitz")
+    return '', 204
 
 
 def check_debug():
