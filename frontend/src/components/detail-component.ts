@@ -25,7 +25,7 @@ const rowTemplate = (emergency: Emergency) => html`
     <tr><th>${i18next.t('id')}</th><td>${emergency.id}</td></tr>
     <tr><th>${i18next.t('date')}</th><td>${getFormattedDate(emergency.start, emergency.end)}</td></tr>
     <tr><th>${i18next.t('level')}</th><td>${emergency.level}</td></tr>
-    <tr><th>${i18next.t('emergencyType')}</th><td>${emergency.type}</td></tr>
+    <tr><th>${i18next.t('emergencyType')}</th><td>${emergency.subtype}</td></tr>
     <tr><th>${i18next.t('place')}</th><td>${getLocation(emergency.district, emergency.location, emergency.town)}</td></tr>
     <tr><th>${i18next.t('departments')}</th><td>${getDepartments(emergency.departments)}</td></tr>`
 
