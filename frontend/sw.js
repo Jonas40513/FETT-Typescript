@@ -22,6 +22,9 @@ self.addEventListener("push", (event) => {
 
 self.addEventListener("notificationclick", (event) => {
     event.notification.close()
+    if (event.notification.data === null) {
+        return
+    }
     event.waitUntil(
         clients.openWindow(event.action === "navigation" ? event.notification.data.navigation : event.notification.data.url)
     )
