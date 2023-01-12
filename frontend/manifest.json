@@ -1,0 +1,17 @@
+{
+    "name": "FETT",
+    "short_name": "FETT",
+    "description": "FETT",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "icons": [
+        {
+            "src": "images/icon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

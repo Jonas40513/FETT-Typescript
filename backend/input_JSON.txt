@@ -990,6 +990,53 @@
     },
     "20": {
       "einsatz": {
+        "num1": "E220102077",
+        "einsatzort": "KI - KREMSMÜNSTER",
+        "startzeit": "Wed, 26 Jan 2022 12:39:43 +0100",
+        "inzeit": "Wed, 26 Jan 2022 13:28:05 +0100",
+        "status": "abgeschlossen",
+        "alarmstufe": 1,
+        "einsatzart": "BRAND",
+        "einsatztyp": {
+          "id": "PREK",
+          "text": "TECHNISCHE PROBEN UND EINSATZKOMMANDOS"
+        },
+        "einsatzsubtyp": {
+          "id": "BMA2-SONST",
+          "text": "BRANDMELDEALARM"
+        },
+        "adresse": {
+          "default": "GREINERSTRAßE 70",
+          "earea": "KREMSMÜNSTER",
+          "emun": "KREMSMÜNSTER",
+          "efeanme": "GREINERSTRAßE",
+          "estnum": "70",
+          "ecompl": "00000-51081-1"
+        },
+        "wgs84": {
+          "lng": 14.120505,
+          "lat": 48.037776
+        },
+        "bezirk": {
+          "id": 5,
+          "text": "Kirchdorf"
+        },
+        "cntfeuerwehren": 1,
+        "feuerwehren": {
+          "405304": {
+            "feuerwehr": "FF Kremsmünster"
+          }
+        },
+        "feuerwehrenarray": {
+          "0": {
+            "fwnr": "405304",
+            "fwname": "FF Kremsmünster"
+          }
+        }
+      }
+    },
+    "21": {
+      "einsatz": {
         "num1": "E220102034",
         "einsatzort": "KI - KREMSMüNSTER",
         "startzeit": "Wed, 26 Jan 2022 01:20:53 +0100",
