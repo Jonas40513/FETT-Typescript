@@ -6,5 +6,6 @@
     "title": "Titel",
     "type": "Typ",
     "place": "Ort",
-    "departments": "Feuerwehren"
+    "departments": "Feuerwehren",
+    "back": "Zurück"
 }

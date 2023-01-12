@@ -6,5 +6,6 @@
     "title": "Title",
     "type": "Type",
     "place": "Place",
-    "departments": "Departments"
+    "departments": "Departments",
+    "back": "Back"
 }
