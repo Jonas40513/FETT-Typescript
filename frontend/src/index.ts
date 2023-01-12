@@ -1,5 +1,5 @@
 import "./components/app-component"
-import { subscribeUrl, w3css } from "./properties"
+import { publicServerKey, subscribeUrl, w3css } from "./properties"
 import "./model/store"
 import emergencyService from "./emergency-service"
 
@@ -19,8 +19,7 @@ async function subscribe() {
     let sw = await navigator.serviceWorker.ready
     let push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey:
-            "BAxxCtddG2073Gixr4PQdzukDGWT0he3q7PNiSESchoyfCEqfTlq9W-XSymOinYJTe04r4SI0fuQlTJu1Z67LKw"
+        applicationServerKey: publicServerKey
     })
     await fetch(subscribeUrl, {
         method: "POST",
