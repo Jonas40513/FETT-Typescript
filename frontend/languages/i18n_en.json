@@ -1,10 +1,11 @@
 {
     "id": "Emergencynumber",
-    "date":"Date",
+    "date": "Date",
     "level": "Emergencylevel",
     "emergencyType": "Emergency Type",
-    "title":"Title",
-    "type":"Typ",
+    "title": "Title",
+    "type": "Typ",
     "place": "Place",
-    "departments":"Departments"
-    }
+    "departments": "Departments",
+    "back": "Back"
+}

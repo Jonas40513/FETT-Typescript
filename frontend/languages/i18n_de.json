@@ -1,10 +1,11 @@
 {
-"id": "Einsatznummer",
-"date":"Datum",
-"level": "Alarmstufe",
-"emergencyType": "Einsatzart",
-"title":"Title",
-"type":"Typ",
-"place": "Ort",
-"departments":"Feuerwehren"
+    "id": "Einsatznummer",
+    "date": "Datum",
+    "level": "Alarmstufe",
+    "emergencyType": "Einsatzart",
+    "title": "Title",
+    "type": "Typ",
+    "place": "Ort",
+    "departments": "Feuerwehren",
+    "back": "Zurück"
 }

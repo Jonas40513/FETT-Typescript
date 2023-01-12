@@ -6,14 +6,18 @@ import { getFormattedDate, getLocation, getDepartments } from "../model/model"
 import { w3css } from "../properties"
 import "./map-component"
 import i18next from "../i18next"
+import router from "../router"
 
 
 const tableTemplate = (emergency: Emergency) => html`
         <link rel="stylesheet" href=${w3css}>
         <div id="details" style="display: grid;
                                 height: 100vh;
-                                grid-template-rows: 1fr 1fr;"
+                                grid-template-rows: 0.1fr 1fr 1fr;"
                                 >
+            <div>
+                <button id="backBtn" class="w3-btn w3-red w3-hover-opacity" @click=${() => router.navigate("/")}>&laquo; ${i18next.t('back')}</button>
+            </div>
             <table class="w3-table w3-striped w3-bordered">
                 <tbody></tbody>
             </table>
@@ -48,6 +52,7 @@ class DetailComponent extends HTMLElement {
             return
         }
         render(tableTemplate(emergency), this.shadowRoot)
+
         const tBody = this.shadowRoot.querySelector("tbody")
         render(rowTemplate(emergency), tBody)
     }
