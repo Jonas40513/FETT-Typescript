@@ -26,7 +26,6 @@
     "copy-webpack-plugin": "^11.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "service-worker-webpack": "^0.0.11",
     "ts-loader": "^9.4.2",
     "typescript": "^4.9.4",
     "webpack": "^5.74.0",
@@ -35,9 +34,9 @@
   },
   "dependencies": {
     "i18next": "^22.4.9",
-    "immer": "^9.0.17",
+    "immer": "^9.0.18",
     "leaflet": "^1.9.3",
-    "lit-html": "^2.6.0",
+    "lit-html": "^2.6.1",
     "navigo": "^8.11.1",
     "rxjs": "^7.8.0"
   }
