@@ -7,6 +7,7 @@ import { w3css } from "../properties"
 import "./map-component"
 import i18next from "../i18next"
 import router from "../router"
+import { distinctUntilChanged, map } from "rxjs"
 
 
 const tableTemplate = (emergency: Emergency) => html`
@@ -34,17 +35,16 @@ const rowTemplate = (emergency: Emergency) => html`
     <tr><th>${i18next.t("departments")}</th><td>${getDepartments(emergency.departments)}</td></tr>`
 
 class DetailComponent extends HTMLElement {
-    static get observedAttributes() {
-        return ["emergency-id"]
-    }
-
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
     }
 
     connectedCallback() {
-        store.subscribe(model => this.render(model.emergencies.find((emergency) => emergency.id == store.getValue().selected)))
+        store.pipe(
+            map(model => model.emergencies.find((emergency) => emergency.id == store.getValue().selected)),
+            distinctUntilChanged()
+        ).subscribe(emergency => this.render(emergency))
     }
 
     private render(emergency: Emergency) {

@@ -25,6 +25,7 @@ class MapComponent extends HTMLElement {
             shadowUrl: "../../res/images/marker-shadow.png",
         })
     }
+
     attributeChangedCallback(name: string, oldValue: string, value: string) {
         this.render(store.getValue().emergencies.find((emergency) => emergency.id === value))
     }

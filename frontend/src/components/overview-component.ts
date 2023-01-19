@@ -7,6 +7,7 @@ import { w3css } from "../properties"
 import "../i18next"
 import i18next from "i18next"
 import router from "../router"
+import { distinctUntilChanged } from "rxjs"
 
 const tableTemplate = html`
     <link rel="stylesheet" href=${w3css}>
@@ -36,7 +37,7 @@ class OverviewComponent extends HTMLElement {
     }
 
     connectedCallback() {
-        store.subscribe(model => this.render(model.emergencies))
+        store.pipe(distinctUntilChanged()).subscribe(model => this.render(model.emergencies))
     }
 
     private render(emergencies: Emergency[]) {

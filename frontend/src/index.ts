@@ -16,8 +16,8 @@ body.appendChild(appComponent)
 emergencyService.fetchEmergencies()
 
 async function subscribe() {
-    let sw = await navigator.serviceWorker.ready
-    let push = await sw.pushManager.subscribe({
+    const sw = await navigator.serviceWorker.ready
+    const push = await sw.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: publicServerKey
     })
@@ -46,4 +46,3 @@ if (!(Notification.permission === "denied" || Notification.permission === "defau
 else {
     subscribe()
 }
-
